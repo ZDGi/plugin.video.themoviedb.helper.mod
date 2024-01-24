@@ -6,7 +6,7 @@ name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 =======
 <addon id="plugin.video.themoviedb.helper.mod"
-version="0.0.2~nexus"
+version="0.0.3~nexus"
 name="TheMovieDb Helper Mod"
 provider-name="ZDGi">
 >>>>>>> 7cce5c1b (Update metadata)
