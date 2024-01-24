@@ -2877,3 +2877,8 @@ msgstr ""
 msgctxt "#32027"
 msgid "Clear default players"
 msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#32510"
+msgid "Threshold to mark as watched (percent)"
+msgstr ""

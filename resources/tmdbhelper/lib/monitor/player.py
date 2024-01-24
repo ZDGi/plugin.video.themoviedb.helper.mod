@@ -2,7 +2,7 @@ from xbmc import Player
 from jurialmunkey.parser import boolean
 from jurialmunkey.window import get_property
 from tmdbhelper.lib.monitor.common import CommonMonitorFunctions, SETPROP_RATINGS, SETMAIN_ARTWORK
-from tmdbhelper.lib.addon.plugin import get_condvisibility, get_infolabel
+from tmdbhelper.lib.addon.plugin import get_condvisibility, get_infolabel, get_setting
 
 
 class PlayerMonitor(Player, CommonMonitorFunctions):
@@ -149,9 +149,9 @@ class PlayerMonitor(Player, CommonMonitorFunctions):
         if f'{self.playerstring.get("tmdb_id")}' != f'{self.details.get("unique_ids", {}).get("tmdb")}':
             return  # Item in the player doesn't match so don't mark as watched
 
-        # Only update if progress is 75% or more
+        # Only update if progress is above the threshold
         progress = ((self.current_time / self.total_time) * 100)
-        if progress < 75:
+        if progress < get_setting('trakt_watchthreshold', 'int'):
             return
 
         import tmdbhelper.lib.api.kodi.rpc as rpc
