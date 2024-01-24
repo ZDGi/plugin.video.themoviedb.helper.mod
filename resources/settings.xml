@@ -582,7 +582,7 @@
                     </dependencies>
                     <control type="toggle"/>
                 </setting>
-                <setting id="trakt_watchthreshold" type="boolean" label="32510" help="">
+                <setting id="trakt_watchthreshold" type="integer" label="32510" help="">
                     <level>0</level>
                     <default>90</default>
                     <constraints>
